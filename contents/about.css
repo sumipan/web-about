@@ -1,12 +1,9 @@
 /* GoogleFontsの読み込み */
-@import 
-url('https://fonts.googleapis.com/css2?family=Kaisei+Opti:wght@400;500;700&display=swap');
-
-@import url('https://fonts.googleapis.com/css2?family='Hina+Mincho'&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Kaisei+Opti:wght@400;500;700&family=Noto+Sans+JP:wght@400;700&display=swap');
 
 /* メインビジュアル_コピー */
 .block_page_base .main_visual_block-catch_copy {
-  font-family:Hina Mincho, serif;
+  font-family: 'Noto Sans JP', sans-serif;
   font-size: 2vw;
 }
 
@@ -254,7 +251,7 @@ h3.image_block-title::after {
   padding: 0px 0px 16px 0px;
   margin-bottom: 4px;
   color: #333;
-  font-family: sans-serif;
+  font-family: 'Noto Sans JP', sans-serif;
   font-size: 20px;
   font-weight: bold;
 }
@@ -278,7 +275,7 @@ h3.image_block-title::after {
   margin-bottom: 16px;
   padding: 0px 16px 16px;
   color: #333;
-  font-family: sans-serif;
+  font-family: 'Noto Sans JP', sans-serif;
   font-size: 16px;
   font-weight: normal;
 }
