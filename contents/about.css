@@ -1,0 +1,409 @@
+/* GoogleFontsの読み込み */
+@import 
+url('https://fonts.googleapis.com/css2?family=Kaisei+Opti:wght@400;500;700&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family='Hina+Mincho'&display=swap');
+
+/* メインビジュアル_コピー */
+.block_page_base .main_visual_block-catch_copy {
+  font-family:Hina Mincho, serif;
+  font-size: 2vw;
+}
+
+/* 見出しh2 */
+h2 {
+  font-family: 'Kaisei Opti', serif;
+  font-size: 36px;
+  font-weight: 500;
+  line-height: 1.2;
+  display: block;
+  position: relative;
+  margin-bottom: 32px;
+}
+
+h2::after {
+  content: '';
+  display: block;
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%);
+  bottom: -24px;
+  width: 120px;
+  height: 4px;
+  background-color: #FF6884;
+}
+
+/* 見出しh2のカラーを白に（複製不可） */
+#row-data-b30b5456-0dc4-4a3b-a174-bdc6e9c3e008 h2 {
+  color: #fff;
+  background-position-x: middle;
+}
+
+/* 見出し小テキスト */
+.block_page_base .ql-size-small {
+  font-family: 'Kaisei Opti', serif;
+  display: block;
+  position: relative;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 1.5;
+  color: #66666660;
+  bottom: -18px;
+}
+
+/* 見出しのカラーを白に（複製不可） */
+#row-data-3e4751d6-2118-4512-895f-81248533a7dc .ql-size-small {
+  color: #fff;
+}
+
+/* テキストカラーを白に（複製不可）  */
+#row-data-981e872d-0d34-4469-8f55-c2836f34ff9e {
+  color: #fff;
+}
+
+/* wd3表現_左寄せレイアウト */
+
+/* wd3表現_左寄せレイアウト_表示領域 */
+.block_contents_area .wd3_left {
+  margin: 0px calc(50% - 50vw + 100px);
+  width: calc(100vw - 240px);
+  position: relative;
+  display: flex;
+  padding: 48px 0px 0px 48px;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+/* wd3表現_左寄せレイアウト_テキスト */
+.wd3_left p {
+  width: 100%;
+}
+
+/* wd3表現__左寄せレイアウト_リスト */
+.wd3_left ul {
+  width: 100%;
+}
+
+/* wd3表現_左寄せレイアウト_画像表示 */
+.wd3_left img {
+  width: 50%;
+  position: relative;
+  max-width: 400px;
+}
+
+/* wd3表現_右寄せレイアウト */
+
+/* wd3表現__右寄せレイアウト_表示領域 */
+.block_contents_area .wd3_right {
+  margin: 0px calc(50% - 50vw + 100px);
+  width: calc(100vw - 200px);
+  position: relative;
+  left: 0px;
+  display: flex;
+  flex-direction: row-reverse;
+  min-height: 300px;
+  grid-template-columns: 1fr 1fr;
+  padding: 48px 40px 0px;
+  justify-items: center;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+/* wd3表現__右寄せレイアウト_リスト */
+.wd3_right ul {
+  width: 100%;
+}
+
+/* wd3表現__右寄せレイアウト_画像表示 */
+.wd3_right img {
+  width: 50%;
+  position: relative;
+  left: 0px;
+  top: 0px;
+  max-width: 400px;
+}
+
+/* 見出しh3 */
+h3 {
+  font-family: 'Kaisei Opti', serif;
+  font-size: 24px;
+  font-weight: bold;
+  line-height: 1.2;
+  padding-left: 0px;
+  display: block;
+  position: relative;
+}
+
+/* 見出しh3_下線表現 */
+h3::after {
+  content: '';
+  display: block;
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%);
+  bottom: -12px;
+  width: 60px;
+  height: 2px;
+  background-color: #FF6884;
+}
+
+/* wd3表現_テキストエリア共通 */
+.wd3_text {
+  max-width: 50%;
+  width: 100%;
+}
+
+/* wd3表現_ボックスレイアウト（シャドウ付き） */
+/* wd3表現_ボックスレイアウト_全体領域 */
+.box_wrap {
+  padding: 24px 0px 0px;
+}
+
+/* wd3表現_ボックスレイアウト_各ボックス */
+.box_area {
+  padding: 0px 24px 48px;
+  margin-top: 0px;
+  border-radius: 16px;
+  box-shadow: 0 0 24px 0 rgba(0, 0, 0, 0.10);
+  background-color: rgba(255, 255, 255, 0.9);
+}
+
+/* wd3表現_ボックスレイアウト_見出しh3 */
+.box_area h3 {
+  padding: 48px 0px 0px;
+  margin-bottom: 12px;
+  text-align: center;
+}
+
+/* wd3表現_ボックスレイアウト_見出しh4 */
+.box_area h4 {
+  padding: 48px 0px 0px;
+  text-align: left;
+  font-size: 21px;
+}
+
+/* wd3表現_ボックスレイアウト_見出しh5 */
+.box_area h5 {
+  padding: 24px 0px 0px;
+  text-align: left;
+  font-size: 18px;
+}
+
+/* wd3表現_ボックスレイアウト_テキスト */
+.box_area p {
+  padding: 8px 0px 16px;
+  text-align: left;
+  font-size: 16px;
+}
+
+/* wd3表現_ボックスレイアウト_画像 */
+.box_area img {
+  width: 100%;
+  padding: 24px 0 0 0;
+}
+
+/* wd3表現_ボックスレイアウト_１カラム */
+.box_column1 {
+  display: block;
+}
+
+/* wd3表現_ボックスレイアウト_２カラム */
+.box_column2 {
+  display: grid;
+  gap: 48px 16px;
+  grid-template-columns: 1fr 1fr;
+}
+
+/* wd3表現_ボックスレイアウト_２カラム_各ボックス */
+.box_column2_section {
+  display: block;
+  width: 100%;
+}
+
+/* 画像とテキストパーツ */
+.block_page_base .image_and_text_block .image_and_text_block-panel .image_block-title {
+  font-size: 20px;
+  font-weight: bold;
+}
+
+/* 画像とテキストパーツ_見出しh3の下線非表示 */
+h3.image_block-title::after {
+  display: none;
+}
+
+/* リストのデザイン */
+.block_page_base li {
+  background-size: 16px 11px;
+  background-position: 0px 8px;
+  background-image: url(https://staging.image.osiro.it/pass/media_libraries/876/images/original/icon_List.png?1661830018);
+  padding-left: 32px;
+  margin-bottom: 24px;
+  color: #333;
+  font-weight: bold;
+}
+
+/* リストのデザイン_最後のリストの余白無しに */
+.block_page_base li:last-of-type {
+  margin-bottom: 0px;
+}
+
+/* スケジュール_タイトル */
+.block_page_base dt {
+  position: relative;
+  text-align: center;
+  padding: 0px 0px 16px 0px;
+  margin-bottom: 4px;
+  color: #333;
+  font-family: sans-serif;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+/* スケジュール_タイトル_下線表現 */
+.block_page_base dt::after {
+  content: '';
+  display: block;
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%);
+  bottom: 8px;
+  width: 60px;
+  height: 2px;
+  background-color: #FF6884;
+}
+
+/* スケジュール_説明 */
+.block_page_base dd {
+  text-align: center;
+  margin-bottom: 16px;
+  padding: 0px 16px 16px;
+  color: #333;
+  font-family: sans-serif;
+  font-size: 16px;
+  font-weight: normal;
+}
+
+/* 入会の流れ */
+.block_page_base .join_us {
+  text-align: center;
+}
+
+/* 入会の流れ_矢印 */
+.block_page_base .join_us img {
+  margin: -16px auto 16px;
+  max-width: 22px;
+}
+
+/* Q&A_タイトル */
+.block_page_base .qa dt {
+  text-align: left;
+  font-size: 16px;
+  font-weight: bold;
+  background-image: url(https://staging.image.osiro.it/pass/media_libraries/878/images/original/QA_Q.png?1661834127);
+  background-size: 25px 28px;
+  background-position: 0px 16px;
+  padding: 16px 0px 16px 40px;
+  border-top: none;
+  border-right: none;
+}
+
+/* Q&A_タイトル_見出しh3の下線非表示 */
+.block_page_base .qa dt::after {
+  display: none;
+}
+
+/* Q&A_説明 */
+.block_page_base .qa dd {
+  text-align: left;
+  font-size: 16px;
+  font-weight: normal;
+  background-image: url(https://staging.image.osiro.it/pass/media_libraries/879/images/original/QA_A.png?1661834172);
+  background-size: 25px 25px;
+  background-position: 0px 2px;
+  padding: 0px 0px 16px 40px;
+  margin-bottom: 24px;
+  border-bottom: 2px solid #FF6884;
+}
+
+/* 各ブロックエリアの余白調整 */
+.block_page_base .block_contents_area {
+  padding: 0px 24px 16px;
+}
+
+/* chromeの薄い線解消 */
+.block_page_base .block_element {
+  margin-top: -0.5px;
+  margin-bottom: -0.5px;
+}
+
+/* タブレット以下のデザイン修正 */
+@media screen and (max-width: 768px) {
+
+  /* メインビジュアル_コピー */
+  .block_page_base .main_visual_block-catch_copy {
+    font-size: 6vw;
+  }
+
+  /* 画像とテキスト */
+  .block_page_base .image_and_text_block .image_and_text_block-panel {
+    margin-bottom: 48px;
+  }
+
+  /* 画像とテキスト_最後のリストの余白無しに */
+  .block_page_base .image_and_text_block .image_and_text_block-panel:last-of-type {
+    margin-bottom: 0px;
+  }
+
+  /* wd3表現_左寄せレイアウト */
+  .block_contents_area .wd3_left {
+    width: 100%;
+    margin: 0px 0px 0px 0;
+    padding: 48px 0px 0px 0px;
+    flex-wrap: wrap;
+  }
+
+  /* wd3表現_左寄せレイアウト_テキスト */
+  .wd3_left p {
+    width: 100%;
+  }
+
+  /* wd3表現_左寄せレイアウト_リスト */
+  .wd3_left ul {
+    width: 100%;
+  }
+
+  /* wd3表現_左寄せレイアウト_画像表示 */
+  .wd3_left img {
+    width: 100%;
+    position: relative;
+    margin: 0px 0 0px 0;
+    max-width: none;
+  }
+
+  /* wd3表現_右寄せレイアウト */
+  .block_contents_area .wd3_right {
+    width: 100%;
+    margin: 0px 0px 0px 0px;
+    left: 0px;
+    padding: 48px 0px 0px 0px;
+    flex-wrap: wrap;
+  }
+
+  /* wd3表現_右寄せレイアウト_画像表示 */
+  .wd3_right img {
+    width: 100%;
+    position: relative;
+    left: 0px;
+    top: 0px;
+    margin: 0px 0 0px 0;
+  }
+
+  /* wd3表現_テキストエリア共通 */
+  .wd3_text {
+    max-width: 100%;
+    width: 100%;
+    margin-bottom: 80px;
+  }
+
+  /* /ここまで＿タブレット以下のデザイン修正 */
+}
