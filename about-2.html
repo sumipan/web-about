@@ -338,6 +338,18 @@ h2::after {
   background-color: #FF6884;
 }
 
+/* 背景画像上のh2_白背景 */
+.h2-overlay h2 {
+  background-color: rgba(255, 255, 255, 0.85);
+  padding: 16px 24px 60px;
+  border-radius: 16px;
+  margin-bottom: 0;
+}
+
+.h2-overlay h2::after {
+  bottom: 24px;
+}
+
 /* 見出し小テキスト */
 .block_page_base .ql-size-small {
   font-family: 'Kaisei Opti', serif;
@@ -379,6 +391,11 @@ h3::after {
 /* wd3表現_ボックスレイアウト_全体領域 */
 .box_wrap {
   padding: 24px 0px 0px;
+}
+
+/* 見出しブロック直後のbox_wrapは上余白を半分に */
+.heading_level_block + .html_block .box_wrap {
+  padding-top: 4px;
 }
 
 /* wd3表現_ボックスレイアウト_各ボックス */
@@ -556,6 +573,11 @@ h3::after {
   padding: 0px 24px 16px;
 }
 
+/* 見出しブロック_h2の上スペース */
+.block_page_base .heading_level_block > div:not(.block_element-attachment_fixed) {
+  padding-top: 20px;
+}
+
 /* chromeの薄い線解消 */
 .block_page_base .block_element {
   margin-top: -0.5px;
@@ -652,20 +674,8 @@ fjs.parentNode.insertBefore(js, fjs);
 };</script><div id="modalView"><modal-view></modal-view></div><div id="tourView"><tour-view></tour-view></div><div id="tipModalContainer"><tip-modal :current-user="current_user" :is-front-tip="true" ref="tip_modal"></tip-modal></div><div id="flashMessage"><transition name="fade"><copied-flash-message :message="message" @reset-flash-message="resetFlashMessage" v-if="showCopiedFlashMessage"></copied-flash-message></transition></div><nav class="sp-quick-nav osiro_before_login_header_color"><ul class="sp-quick-nav__list"><li class="sp-quick-nav__item"><a class="sp-quick-nav__link" href="/"><div class="svgColorOperation" style="mask-image: url(/images/svg_color_operation/home-icon.svg); -webkit-mask-image: url(/images/svg_color_operation/home-icon.svg); width: 24px; height: 24px; background-color: #607d8b;"></div><span class="sp-quick-nav__label osiro_before_login_header_icon_color">ホーム</span></a></li><li class="sp-quick-nav__item"><a class="sp-quick-nav__link" href="/contents"><div class="sp-quick-nav__icon-wrapper"><div class="svgColorOperation" style="mask-image: url(/images/svg_color_operation/note-icon.svg); -webkit-mask-image: url(/images/svg_color_operation/note-icon.svg); width: 24px; height: 24px; background-color: #607d8b;"></div><span class="sp-quick-nav__new-badge">New</span></div><span class="sp-quick-nav__label osiro_before_login_header_icon_color">運営＆サディより</span></a></li><li class="sp-quick-nav__item"><a class="sp-quick-nav__link" href="/blogs"><div class="sp-quick-nav__icon-wrapper"><div class="svgColorOperation" style="mask-image: url(/images/svg_color_operation/pen-icon.svg); -webkit-mask-image: url(/images/svg_color_operation/pen-icon.svg); width: 24px; height: 24px; background-color: #607d8b;"></div></div><span class="sp-quick-nav__label osiro_before_login_header_icon_color">ブログ</span></a></li><li class="sp-quick-nav__item"><a class="sp-quick-nav__link" href="/events?filter_type=upcoming&amp;order_type=start_date_asc"><div class="sp-quick-nav__icon-wrapper"><div class="svgColorOperation" style="mask-image: url(/images/svg_color_operation/calendar-icon.svg); -webkit-mask-image: url(/images/svg_color_operation/calendar-icon.svg); width: 24px; height: 24px; background-color: #607d8b;"></div></div><span class="sp-quick-nav__label osiro_before_login_header_icon_color">イベント</span></a></li><li class="sp-quick-nav__item"><button class="sp-quick-nav__link js-menu-open-btn" type="button"><i class="sp-quick-nav__icon icon-Humberger osiro_before_login_header_icon_color"></i><span class="sp-quick-nav__label osiro_before_login_header_icon_color">メニュー</span></button></li></ul></nav><div class="l-header__wrap unLogin osiro_before_login_header_color"><header class="l-header"><p class="l-header__title"><a class="l-header__titleText" href="/"><img alt="コルクラボ" class="l-header__logo__sp" src="https://image.osiro.it/pass/site_settings/25/site_logo_for_sps/original/cork.png?1646186296" /></a></p><a class="l-header__login-text osiro-ios-hidden osiro_before_login_header_icon_color" href="/login">ログイン</a></header></div><script>window.current_user = null</script><div id="side_nav"><aside class="l-menu js-menu unlogin-sp-menu"><h1 class="l-menu__title"><a href="/"><img alt="コルクラボ" class="siteLogo" src="https://image.osiro.it/pass/site_settings/25/site_logos/original/cork.png?1646186296" /></a></h1><div class="l-menu__inner"><div id="side_menu"><nav class="nav"><ul class="nav__items--lv1"><li class="nav__item navlist__about"><a href="/about">コルクラボはこんなところ</a></li><li class="nav__item navlist__contents osiroHighlightFunctionLabel"><a href="/contents">運営＆サディより<span class="nav__new-badge">New</span></a></li><li class="nav__item navlist__blogs osiroHighlightFunctionLabel"><a href="/events?filter_type=upcoming&amp;order_type=start_date_asc">イベント</a></li><li class="nav__item navlist__blogs osiroHighlightFunctionLabel"><a href="/blogs">ブログ</a></li><li class="nav__item navlist__about"><a href="/20260520-about-2">コルクラボはこんなところ</a></li></ul><ul class="nav__items--lv3"><li class="nav__item navlist__user_policy"><a href="/user-policy">利用規約</a></li><li class="nav__item navlist__privacy_policy"><a href="/privacy-policy">プライバシーポリシー</a></li><li class="nav__item navlist__specific_commercial"><a href="/specific-commercial">特定商取引法に基づく表記</a></li><li class="nav__item navlist__antisocial"><a href="/antisocial">反社会勢力に対する基本方針</a></li><li class="nav__item navlist__contact"><a href="/contact">お問い合わせ</a></li><li class="nav__item navlist__qa"><a href="/qa">よくある質問</a></li></ul></nav></div><button class="l-menu__close js-menu-close-btn" type="button"><i class="l-menu__close-icon icon-Close"></i><span class="l-menu__close-label">閉じる</span></button></div></aside></div><div id="toastLayout"></div><div class="l-content" id="l-content"><div class="l-content__main"><main class="l-main js-l-main slid"><div class="l-main__content"><div class="page-1834 page-20260520-about-2"><div class="block_page_base top_center">
 <div class="all_background_layer top_center" style="background-color: rgb(255, 255, 255); background-image: url('https://image.osiro.it/pass/image_uploads/1440590/images/original/%E3%82%B3%E3%83%AB%E3%82%AF%E3%83%A9%E3%83%9B%E3%82%99%E6%96%B0%E6%AD%93%E5%8B%9F%E9%9B%86KV_%E8%83%8C%E6%99%AF.jpg?1741312230=&width=1500&fit=bounds');"></div>
 
-<!-- メインビジュアル -->
-<div class="main_visual_block">
-  <div class="main_visual_block-clip">
-    <div class="main_visual_block-back_area pc_only contain">
-      <img src="https://image.osiro.it/pass/image_uploads/1440553/images/original/%E3%82%B3%E3%83%AB%E3%82%AF%E3%83%A9%E3%83%9B%E3%82%99%E6%96%B0%E6%AD%93%E5%8B%9F%E9%9B%86KV_%E8%83%8C%E6%99%AF.jpg?1741308783=&width=1500&fit=bounds" class="main_visual_block-back_image">
-    </div>
-    <div class="main_visual_block-back_area sp_only contain">
-      <img src="https://image.osiro.it/pass/image_uploads/1440555/images/original/%E3%82%B3%E3%83%AB%E3%82%AF%E3%83%A9%E3%83%9B%E3%82%99%E6%96%B0%E6%AD%93%E5%8B%9F%E9%9B%86KV_%E8%83%8C%E6%99%AF.jpg?1741308804=&width=1500&fit=bounds" class="main_visual_block-back_image">
-    </div>
-  </div>
-</div>
-
 <!-- 募集スケジュール -->
-<div class="heading_level_block block_element top_center">
+<div class="heading_level_block block_element top_center h2-overlay">
   <div class="block_element-attachment_fixed top_center"></div>
   <div>
     <h2>26期新メンバー募集</h2>
@@ -781,53 +791,9 @@ fjs.parentNode.insertBefore(js, fjs);
   <img src="https://image.osiro.it/pass/image_uploads/1440567/images/original/%E3%82%B3%E3%83%AB%E3%82%AF%E3%83%A9%E3%83%9B%E3%82%99%E3%83%AD%E3%82%B3%E3%82%99.png?1741309968=&width=1500&fit=bounds">
 </div>
 
-<div class="html_block block_element top_center bg-gray-cool">
-  <div>
-コルクラボは
-「つながり」を丁寧に育てていく場所です。<br>
-年齢も職業も価値観も異なる人たちが集まり
-共に学び、語り合い、創造しながら<br>
-自分自身を深く知るきっかけを得ていきます。<br>
-<br>
-そのための、4つの行動指針を大切にしています。<br>
-<br>
-<b>1.自分の安全・安心を知る</b><br>
-自分が心から安心できる場所を知ること。<br>
-どんな時に自分は安心できるのかを観察すること。<br>
-<br>
-<b>2. 自分の言葉を紡ぐ</b><br>
-言葉は、思考を形にするためのツール。<br>
-言葉にすることで、自分の本音に出会うことができる。<br>
-<br>
-<b>3. 好きなことにのめりこむ</b><br>
-「好き」は、人を動かす最大のエネルギー。<br>
-その熱量が、周囲の人たちをも巻き込んでいく。<br>
-<br>
-<b>4. 人の頼り方を知る</b><br>
-一人で頑張りすぎるのではなく、適切に頼ること。<br>
-頼ることで、関係性が豊かになり、世界が広がる。<br>
-<br>
-<br>
-コルクラボでは、日々<br>
-さまざまな対話や仮説、実験が生まれています。
-  </div>
-</div>
-
-<div class="image_block block_element top_center">
-  <img src="https://image.osiro.it/pass/image_uploads/1440666/images/original/IMG_0438.jpg?1741313672=&width=1500&fit=bounds">
-</div>
-
-<div class="image_block block_element top_center">
-  <img src="https://image.osiro.it/pass/image_uploads/1440667/images/original/231213203344342.JPG?1741313998=&width=1500&fit=bounds">
-</div>
-
-<div class="image_block block_element top_center">
-  <img src="https://image.osiro.it/pass/image_uploads/1440669/images/original/DSC_1456.JPG?1741314022=&width=1500&fit=bounds">
-</div>
-
 <!-- 活動内容 -->
-<div class="heading_level_block block_element top_center">
-  <div class="block_element-attachment_fixed top_center" style="background-image: url('https://staging.image.osiro.it/pass/image_uploads/21519/images/original/About_BG1.png?1661913066');"></div>
+<div class="heading_level_block block_element top_center h2-overlay">
+  <div class="block_element-attachment_fixed top_center"></div>
   <div>
     <h2>活動内容</h2>
   </div>
@@ -944,8 +910,8 @@ fjs.parentNode.insertBefore(js, fjs);
 </div>
 
 <!-- グループ活動 -->
-<div class="heading_level_block block_element top_center">
-  <div class="block_element-attachment_fixed top_center" style="background-image: url('https://staging.image.osiro.it/pass/image_uploads/21523/images/original/About_BG2.png?1661913112');"></div>
+<div class="heading_level_block block_element top_center h2-overlay">
+  <div class="block_element-attachment_fixed top_center"></div>
   <div>
     <h2>グループ活動</h2>
   </div>
@@ -1000,7 +966,8 @@ fjs.parentNode.insertBefore(js, fjs);
   </div>
 </div>
 
-<div class="heading_level_block block_element top_center">
+<div class="heading_level_block block_element top_center h2-overlay">
+  <div class="block_element-attachment_fixed top_center"></div>
   <div>
     <h2>コルクラボについて</h2>
   </div>
@@ -1021,6 +988,46 @@ fjs.parentNode.insertBefore(js, fjs);
         <p>コルクラボならではの機会を活かすかどうかは、自分の行動次第。 </p>
         <p>2025年は「編集」をテーマに、1年を通して「編集という思考のしかた」を深めてきました。<br/>
         そして、2026年のテーマは「つくる、届ける」。創作や発信を通じて、自分たちの世界をさらに広げていきます。</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- コルクラボとは -->
+<div class="html_block block_element top_center">
+  <div>
+    <div class="box_wrap">
+      <div class="box_area">
+        <h3>行動指針</h3>
+        <p>コルクラボは
+        「つながり」を丁寧に育てていく場所です。<br/>
+        年齢も職業も価値観も異なる人たちが集まり
+        共に学び、語り合い、創造しながら
+        自分自身を深く知るきっかけを得ていきます。</p>
+        <p>そのための、4つの行動指針を大切にしています。</p>
+        <dl>
+          <dt>1. 自分の安全・安心を知る</dt>
+          <dd>自分が心から安心できる場所を知ること。<br/>
+          どんな時に自分は安心できるのかを観察すること。</dd>
+          <dt>2. 自分の言葉を紡ぐ</dt>
+          <dd>言葉は、思考を形にするためのツール。<br/>
+          言葉にすることで、自分の本音に出会うことができる。
+          </dd>
+          <dt>3. 好きなことにのめりこむ</dt>
+          <dd>「好き」は、人を動かす最大のエネルギー。<br/>
+          その熱量が、周囲の人たちをも巻き込んでいく。
+          </dd>
+          <dt>4. 人の頼り方を知る</dt>
+          <dd>一人で頑張りすぎるのではなく、適切に頼ること。<br/>
+          頼ることで、関係性が豊かになり、世界が広がる。
+          </dd>
+        </dl>
+        <p>コルクラボでは、日々<br/>
+        さまざまな対話や仮説、実験が生まれています。
+        </p>
+        <img src="https://image.osiro.it/pass/image_uploads/1440666/images/original/IMG_0438.jpg?1741313672=&width=1500&fit=bounds">
+        <img src="https://image.osiro.it/pass/image_uploads/1440667/images/original/231213203344342.JPG?1741313998=&width=1500&fit=bounds">
+        <img src="https://image.osiro.it/pass/image_uploads/1440669/images/original/DSC_1456.JPG?1741314022=&width=1500&fit=bounds">
       </div>
     </div>
   </div>
@@ -1115,7 +1122,7 @@ fjs.parentNode.insertBefore(js, fjs);
 <div class="space_block space_block-lg block_element top_center"></div>
 
 <!-- 注意事項 -->
-<div class="heading_level_block block_element top_center">
+<div class="heading_level_block block_element top_center h2-overlay">
   <div class="block_element-attachment_fixed top_center"></div>
   <div>
     <h2>注意事項</h2>

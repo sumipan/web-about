@@ -37,6 +37,18 @@ h2::after {
   background-color: #FF6884;
 }
 
+/* 背景画像上のh2_白背景 */
+.h2-overlay h2 {
+  background-color: rgba(255, 255, 255, 0.85);
+  padding: 16px 24px 60px;
+  border-radius: 16px;
+  margin-bottom: 0;
+}
+
+.h2-overlay h2::after {
+  bottom: 24px;
+}
+
 /* 見出し小テキスト */
 .block_page_base .ql-size-small {
   font-family: 'Kaisei Opti', serif;
@@ -78,6 +90,11 @@ h3::after {
 /* wd3表現_ボックスレイアウト_全体領域 */
 .box_wrap {
   padding: 24px 0px 0px;
+}
+
+/* 見出しブロック直後のbox_wrapは上余白を半分に */
+.heading_level_block + .html_block .box_wrap {
+  padding-top: 4px;
 }
 
 /* wd3表現_ボックスレイアウト_各ボックス */
@@ -253,6 +270,11 @@ h3::after {
 /* 各ブロックエリアの余白調整 */
 .block_page_base .block_element > div:not(.block_element-attachment_fixed) {
   padding: 0px 24px 16px;
+}
+
+/* 見出しブロック_h2の上スペース */
+.block_page_base .heading_level_block > div:not(.block_element-attachment_fixed) {
+  padding-top: 20px;
 }
 
 /* chromeの薄い線解消 */
