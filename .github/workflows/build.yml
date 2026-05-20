@@ -1,0 +1,27 @@
+name: Build about.html
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'contents/**'
+      - 'scripts/build.py'
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Build
+        run: python3 scripts/build.py
+
+      - name: Commit about.html
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add about.html
+          git diff --staged --quiet || git commit -m "chore: rebuild about.html [skip ci]"
+          git push
