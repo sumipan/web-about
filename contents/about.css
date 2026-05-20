@@ -212,8 +212,10 @@ h3::after {
 
 /* 入会の流れ_矢印 */
 .block_page_base .join_us img {
+  display: block;
+  width: 22px;
+  padding: 0;
   margin: -16px auto 16px;
-  max-width: 22px;
 }
 
 /* Q&A_タイトル */
