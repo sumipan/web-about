@@ -48,11 +48,6 @@ h2::after {
   bottom: -18px;
 }
 
-/* 見出しのカラーを白に（複製不可） */
-#row-data-3e4751d6-2118-4512-895f-81248533a7dc .ql-size-small {
-  color: #fff;
-}
-
 /* テキストカラーを白に（複製不可）  */
 #row-data-981e872d-0d34-4469-8f55-c2836f34ff9e {
   color: #fff;
@@ -215,17 +210,6 @@ h3::after {
 .box_column2_section {
   display: block;
   width: 100%;
-}
-
-/* 画像とテキストパーツ */
-.block_page_base .image_and_text_block .image_and_text_block-panel .image_block-title {
-  font-size: 20px;
-  font-weight: bold;
-}
-
-/* 画像とテキストパーツ_見出しh3の下線非表示 */
-h3.image_block-title::after {
-  display: none;
 }
 
 /* リストのデザイン */
