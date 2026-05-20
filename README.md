@@ -8,18 +8,18 @@
 |---|---|
 | `contents/about.css` | カスタム CSS（入稿用） |
 | `contents/about.html` | カスタム HTML（入稿用） |
-| `template.html` | CMS から取得したページの雛形 |
-| `about-2.html` | ビルド成果物（ローカルプレビュー用） |
-| `build.py` | template + CSS + HTML を結合してプレビュー用 HTML を生成 |
-| `export-text.py` | about.html からテキストを抽出して about.md に出力 |
+| `contents/template.html` | CMS から取得したページの雛形 |
+| `about.html` | ビルド成果物（ローカルプレビュー用） |
+| `scripts/build.py` | template + CSS + HTML を結合してプレビュー用 HTML を生成 |
+| `scripts/export-text.py` | contents/about.html からテキストを抽出して about.md に出力 |
 | `about.md` | about.html のテキスト抽出結果 |
 
 ## ローカルプレビュー
 
 ```sh
-python3 build.py
+python3 scripts/build.py
 python3 -m http.server 8765
-# → http://localhost:8765/about-2.html
+# → http://localhost:8765/about.html
 ```
 
 ## CMS 入稿
@@ -75,12 +75,9 @@ CSS 記述・HTML 構造設計時に考慮が必要。
 <img src="arrow.png">
 ```
 
-**CSS への影響:**  
-- `dl img`（子孫セレクタ）は CMS では**機能しない** — img は dl の外に出る
-- `.box_area > img`（直接子セレクタ）は**範囲が広すぎる** — コンテンツ画像も巻き込む
-- **正しいセレクタ（CMS）: `.box_area > dl.join_us + img`**（dl.join_us の直後の兄弟 img）
+**CSS セレクタ: `.box_area > dl.join_us + img`**（dl.join_us の直後の兄弟 img）
 
-**注意**: ローカルプレビューではブラウザが `<img>` を `<dl>` 内に保持するため、CMS 用セレクタはローカルではマッチしない。ローカル確認用に `.box_area > dl.join_us img` も合わせて記述する。
+**ソース HTML の書き方**: `<img>` を最初から `<dl>` の外に書くことで、ローカル・CMS 両方で同じ DOM 構造になる。→ `contents/about.html` の「入会の流れ」セクションを参照。
 
 ---
 

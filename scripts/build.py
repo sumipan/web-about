@@ -5,11 +5,12 @@ template.html + contents/about.css + contents/about.html -> about-2.html
 
 from pathlib import Path
 
-BASE = Path(__file__).parent
+BASE = Path(__file__).parent.parent  # scripts/ の親 = プロジェクトルート
+CONTENTS = BASE / "contents"
 
-template = (BASE / "template.html").read_text(encoding="utf-8")
-css      = (BASE / "contents/about.css").read_text(encoding="utf-8")
-html     = (BASE / "contents/about.html").read_text(encoding="utf-8")
+template = (CONTENTS / "template.html").read_text(encoding="utf-8")
+css      = (CONTENTS / "about.css").read_text(encoding="utf-8")
+html     = (CONTENTS / "about.html").read_text(encoding="utf-8")
 
 # CSS を <style id="block_page_css"> タグに挿入
 result = template.replace(
@@ -25,6 +26,6 @@ result = result.replace(
     1,
 )
 
-out = BASE / "about-2.html"
+out = BASE / "about.html"
 out.write_text(result, encoding="utf-8")
 print(f"Built: {out} ({out.stat().st_size:,} bytes)")
