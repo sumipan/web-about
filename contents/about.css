@@ -211,7 +211,10 @@ h3::after {
 }
 
 /* 入会の流れ_矢印 */
-.box_area dl img {
+/* CMS: HTML5パーサーがdl内のimgを兄弟要素に移動するため + セレクタ */
+/* Local: ブラウザはdl内にimgを保持するため子孫セレクタも併記 */
+.box_area > dl.join_us + img,
+.box_area > dl.join_us img {
   display: block;
   width: 22px !important;
   padding: 0 !important;
