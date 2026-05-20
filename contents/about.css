@@ -37,12 +37,6 @@ h2::after {
   background-color: #FF6884;
 }
 
-/* 見出しh2のカラーを白に（複製不可） */
-#row-data-b30b5456-0dc4-4a3b-a174-bdc6e9c3e008 h2 {
-  color: #fff;
-  background-position-x: middle;
-}
-
 /* 見出し小テキスト */
 .block_page_base .ql-size-small {
   font-family: 'Kaisei Opti', serif;
@@ -55,15 +49,11 @@ h2::after {
   bottom: -18px;
 }
 
-/* テキストカラーを白に（複製不可）  */
-#row-data-981e872d-0d34-4469-8f55-c2836f34ff9e {
-  color: #fff;
-}
 
 /* wd3表現_左寄せレイアウト */
 
 /* wd3表現_左寄せレイアウト_表示領域 */
-.block_contents_area .wd3_left {
+.wd3_left {
   margin: 0px calc(50% - 50vw + 100px);
   width: calc(100vw - 240px);
   position: relative;
@@ -93,7 +83,7 @@ h2::after {
 /* wd3表現_右寄せレイアウト */
 
 /* wd3表現__右寄せレイアウト_表示領域 */
-.block_contents_area .wd3_right {
+.wd3_right {
   margin: 0px calc(50% - 50vw + 100px);
   width: calc(100vw - 200px);
   position: relative;
@@ -314,7 +304,7 @@ h3::after {
 }
 
 /* 各ブロックエリアの余白調整 */
-.block_page_base .block_contents_area {
+.block_page_base .block_element > div:not(.block_element-attachment_fixed) {
   padding: 0px 24px 16px;
 }
 
@@ -343,7 +333,7 @@ h3::after {
   }
 
   /* wd3表現_左寄せレイアウト */
-  .block_contents_area .wd3_left {
+  .wd3_left {
     width: 100%;
     margin: 0px 0px 0px 0;
     padding: 48px 0px 0px 0px;
@@ -369,7 +359,7 @@ h3::after {
   }
 
   /* wd3表現_右寄せレイアウト */
-  .block_contents_area .wd3_right {
+  .wd3_right {
     width: 100%;
     margin: 0px 0px 0px 0px;
     left: 0px;
@@ -423,3 +413,7 @@ h3::after {
 .bg-beige      { background-color: rgb(255, 248, 237); }
 .bg-gray-cool  { background-color: rgb(247, 248, 249); }
 .bg-gray-warm  { background-color: rgb(184, 181, 177); }
+
+/* ブロックへのユーティリティクラス → 子 p に伝播 */
+.text-center > div > p { text-align: center; }
+.font-large > div > p  { font-size: 1.5em; }
