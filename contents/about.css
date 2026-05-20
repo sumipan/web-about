@@ -1,6 +1,12 @@
 /* GoogleFontsの読み込み */
 @import url('https://fonts.googleapis.com/css2?family=Kaisei+Opti:wght@400;500;700&family=Noto+Sans+JP:wght@400;700&display=swap');
 
+/* ページ基本 */
+.block_page_base {
+  font-family: 'Noto Sans JP', sans-serif;
+  background-color: unset;
+}
+
 /* メインビジュアル_コピー */
 .block_page_base .main_visual_block-catch_copy {
   font-family: 'Noto Sans JP', sans-serif;
@@ -16,6 +22,7 @@ h2 {
   display: block;
   position: relative;
   margin-bottom: 32px;
+  text-align: center;
 }
 
 h2::after {
@@ -388,3 +395,31 @@ h3::after {
 
   /* /ここまで＿タブレット以下のデザイン修正 */
 }
+
+/* image_block 画像サイズ */
+.image_block img {
+  max-width: 800px;
+}
+
+/* 固定フッターボタン */
+.fixed_footer_block-btn {
+  background-color: rgba(255, 166, 77, 0.95);
+  color: rgb(255, 255, 255);
+}
+
+/* スペーサー */
+.space_block {
+  display: block;
+  width: 100%;
+}
+.space_block-lg { height: 54px; }
+.space_block-md { height: 48px; }
+
+/* 背景色ユーティリティ */
+.bg-white      { background-color: rgb(253, 253, 253); }
+.bg-peach      { background-color: rgb(248, 233, 208); }
+.bg-pink       { background-color: rgb(255, 238, 241); }
+.bg-gray-light { background-color: rgb(249, 249, 249); }
+.bg-beige      { background-color: rgb(255, 248, 237); }
+.bg-gray-cool  { background-color: rgb(247, 248, 249); }
+.bg-gray-warm  { background-color: rgb(184, 181, 177); }
