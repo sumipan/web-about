@@ -351,68 +351,6 @@ h2::after {
 }
 
 
-/* wd3表現_左寄せレイアウト */
-
-/* wd3表現_左寄せレイアウト_表示領域 */
-.wd3_left {
-  margin: 0px calc(50% - 50vw + 100px);
-  width: calc(100vw - 240px);
-  position: relative;
-  display: flex;
-  padding: 48px 0px 0px 48px;
-  justify-content: space-evenly;
-  align-items: center;
-}
-
-/* wd3表現_左寄せレイアウト_テキスト */
-.wd3_left p {
-  width: 100%;
-}
-
-/* wd3表現__左寄せレイアウト_リスト */
-.wd3_left ul {
-  width: 100%;
-}
-
-/* wd3表現_左寄せレイアウト_画像表示 */
-.wd3_left img {
-  width: 50%;
-  position: relative;
-  max-width: 400px;
-}
-
-/* wd3表現_右寄せレイアウト */
-
-/* wd3表現__右寄せレイアウト_表示領域 */
-.wd3_right {
-  margin: 0px calc(50% - 50vw + 100px);
-  width: calc(100vw - 200px);
-  position: relative;
-  left: 0px;
-  display: flex;
-  flex-direction: row-reverse;
-  min-height: 300px;
-  grid-template-columns: 1fr 1fr;
-  padding: 48px 40px 0px;
-  justify-items: center;
-  justify-content: space-evenly;
-  align-items: center;
-}
-
-/* wd3表現__右寄せレイアウト_リスト */
-.wd3_right ul {
-  width: 100%;
-}
-
-/* wd3表現__右寄せレイアウト_画像表示 */
-.wd3_right img {
-  width: 50%;
-  position: relative;
-  left: 0px;
-  top: 0px;
-  max-width: 400px;
-}
-
 /* 見出しh3 */
 h3 {
   font-family: 'Kaisei Opti', serif;
@@ -435,12 +373,6 @@ h3::after {
   width: 60px;
   height: 2px;
   background-color: #FF6884;
-}
-
-/* wd3表現_テキストエリア共通 */
-.wd3_text {
-  max-width: 50%;
-  width: 100%;
 }
 
 /* wd3表現_ボックスレイアウト（シャドウ付き） */
@@ -490,6 +422,12 @@ h3::after {
 .box_area img {
   width: 100%;
   padding: 24px 0 0 0;
+}
+
+/* wd3表現_ボックスレイアウト_リスト */
+.box_area > ul {
+  max-width: 480px;
+  margin: 0 auto;
 }
 
 /* wd3表現_ボックスレイアウト_１カラム */
@@ -631,57 +569,6 @@ h3::after {
   /* 画像とテキスト_最後のリストの余白無しに */
   .block_page_base .image_and_text_block .image_and_text_block-panel:last-of-type {
     margin-bottom: 0px;
-  }
-
-  /* wd3表現_左寄せレイアウト */
-  .wd3_left {
-    width: 100%;
-    margin: 0px 0px 0px 0;
-    padding: 48px 0px 0px 0px;
-    flex-wrap: wrap;
-  }
-
-  /* wd3表現_左寄せレイアウト_テキスト */
-  .wd3_left p {
-    width: 100%;
-  }
-
-  /* wd3表現_左寄せレイアウト_リスト */
-  .wd3_left ul {
-    width: 100%;
-  }
-
-  /* wd3表現_左寄せレイアウト_画像表示 */
-  .wd3_left img {
-    width: 100%;
-    position: relative;
-    margin: 0px 0 0px 0;
-    max-width: none;
-  }
-
-  /* wd3表現_右寄せレイアウト */
-  .wd3_right {
-    width: 100%;
-    margin: 0px 0px 0px 0px;
-    left: 0px;
-    padding: 48px 0px 0px 0px;
-    flex-wrap: wrap;
-  }
-
-  /* wd3表現_右寄せレイアウト_画像表示 */
-  .wd3_right img {
-    width: 100%;
-    position: relative;
-    left: 0px;
-    top: 0px;
-    margin: 0px 0 0px 0;
-  }
-
-  /* wd3表現_テキストエリア共通 */
-  .wd3_text {
-    max-width: 100%;
-    width: 100%;
-    margin-bottom: 80px;
   }
 
   /* /ここまで＿タブレット以下のデザイン修正 */
@@ -1104,47 +991,38 @@ fjs.parentNode.insertBefore(js, fjs);
   </div>
 </div>
 
-<!-- 理念 -->
 <div class="heading_level_block block_element top_center">
   <div>
-    <h2>理念</h2>
+    <h2>コルクラボについて</h2>
   </div>
 </div>
 
+<!-- 理念 -->
 <div class="html_block block_element top_center">
   <div>
     <div class="box_wrap">
       <div class="box_area">
-        <p>コルクラボという場には</p>
-        <p>個性豊かなメンバーと、多くの気づきと学びがあります。</p>
-        <p><br></p>
-        <p>ただ、コルクラボは学校ではありません。</p>
-        <p>手取り足取り、学びをサポートしたりはしません。</p>
-        <p><br></p>
+        <h3>理念</h3>
+        <p>コルクラボという場には<br/>
+        個性豊かなメンバーと、多くの気づきと学びがあります。</p>
+        <p>ただ、コルクラボは学校ではありません。<br/>
+        手取り足取り、学びをサポートしたりはしません。</p>
         <p>なのに、とてつもなくたくさんのことを得られる場です。</p>
-        <p><br></p>
         <p>学びや気づき、魅力的な出会いは、自分の中に知りたい、分かりたい、一歩踏み出したいという欲望が生まれた後に来ます。どれだけ洗練された情報が目の前にあったとしても、自分の中に欲望がない人は、そこから何かを得ることは難しいでしょう。</p>
-        <p><br></p>
         <p>コルクラボならではの機会を活かすかどうかは、自分の行動次第。 </p>
-        <p><br></p>
-        <p>2025年は「編集」をテーマに、1年を通して「編集という思考のしかた」を深めてきました。</p>
-        <p>そして、2026年のテーマは「つくる、届ける」。創作や発信を通じて、自分たちの世界をさらに広げていきます。</p>
+        <p>2025年は「編集」をテーマに、1年を通して「編集という思考のしかた」を深めてきました。<br/>
+        そして、2026年のテーマは「つくる、届ける」。創作や発信を通じて、自分たちの世界をさらに広げていきます。</p>
       </div>
     </div>
   </div>
 </div>
 
 <!-- 価値観 -->
-<div class="heading_level_block block_element top_center bg-beige">
+<div class="html_block block_element top_center">
   <div>
-    <h2>価値観(大切にしていること)</h2>
-  </div>
-</div>
-
-<div class="html_block block_element top_center bg-beige">
-  <div>
-    <div class="wd3_left">
-      <div class="wd3_text">
+    <div class="box_wrap">
+      <div class="box_area">
+        <h3>価値観(大切にしていること)</h3>
         <ul>
           <li>水をすくうのではなく、水を「交換」する
           ー得たことを持ち帰ると同時に、置いて帰ろう</li>
@@ -1157,16 +1035,11 @@ fjs.parentNode.insertBefore(js, fjs);
 </div>
 
 <!-- 得られること -->
-<div class="heading_level_block block_element top_center bg-beige">
+<div class="html_block block_element top_center">
   <div>
-    <h2>得られること</h2>
-  </div>
-</div>
-
-<div class="html_block block_element top_center bg-beige">
-  <div>
-    <div class="wd3_right">
-      <div class="wd3_text">
+    <div class="box_wrap">
+      <div class="box_area">
+        <h3>得られること</h3>
         <ul>
           <li>自分にとっての居心地の良さについて、解像度が上がります</li>
           <li>自分という人間について、他者について、理解が深まります</li>
@@ -1179,16 +1052,11 @@ fjs.parentNode.insertBefore(js, fjs);
 </div>
 
 <!-- こんな人にオススメ -->
-<div class="heading_level_block block_element top_center bg-beige">
+<div class="html_block block_element top_center">
   <div>
-    <h2>こんな人にオススメ</h2>
-  </div>
-</div>
-
-<div class="html_block block_element top_center bg-beige">
-  <div>
-    <div class="wd3_left">
-      <div class="wd3_text">
+    <div class="box_wrap">
+      <div class="box_area">
+        <h3>こんな人にオススメ</h3>
         <ul>
           <li>自分の世界を緩やかに広げたい人</li>
           <li>コミュニティ、居心地について語り合える同志を見つけたい人</li>
@@ -1201,55 +1069,35 @@ fjs.parentNode.insertBefore(js, fjs);
 </div>
 
 <!-- 主催者からのメッセージ -->
-<div class="heading_level_block block_element top_center bg-beige">
+<div class="html_block block_element top_center">
   <div>
-    <h2>主催者からのメッセージ</h2>
-  </div>
-</div>
-
-<div class="html_block block_element top_center bg-beige">
-  <div>
-    <div class="wd3_right">
-      <div class="wd3_text">
-        <p>
-        人はみんな、どこかで孤独を感じている。
-        でも、それは決して悪いことじゃない。<br>
-        <br>
-        むしろ、孤独だからこそ、人とつながることの意味が深くなる。<br>
-        </p>
+    <div class="box_wrap">
+      <div class="box_area">
+        <h3>主催者からのメッセージ</h3>
+        <p>人はみんな、どこかで孤独を感じている。
+        でも、それは決して悪いことじゃない。</p>
+        <p>むしろ、孤独だからこそ、人とつながることの意味が深くなる。</p>
         <p>この場所を通じて気づいたのは、僕自身が変わり続けているということ。</p>
-        <br>
         <p>はじめは「たくさんの人の成長を見守る場になる」と思っていました。
         でも実際には、ここでの対話や挑戦が僕自身の視点を変え、思考を深め、
-        編集者としてのあり方に影響を与えてきました。<br>
-        <br>
-        例えば、かつて人前で話すことが苦手だったメンバーが自分の言葉を磨き、
+        編集者としてのあり方に影響を与えてきました。</p>
+        <p>例えば、かつて人前で話すことが苦手だったメンバーが自分の言葉を磨き、
         イベントを主催するようになったり、
-        自分の本当の欲求に気づいて、仕事を変えたり、起業したりする人もいる。<br>
-        <br>
-        逆に、今の仕事により深く向き合い、充実感を増していく人もいる。<br>
-        <br>
-        大きな夢を持つ必要はない。
-        大切なのは「聖なる一歩」を踏み出すこと。<br>
-        <br>
-        それは、ほんの小さな挑戦かもしれない。
-        でも、その一歩が、自分をより好きになれる未来へとつながっている。<br>
-        <br>
-        コルクラボは、そんな「聖なる一歩」を支え合う場です。<br>
-        <br>
-        ほかのコミュニティと異なるのは、ここには現役のクリエイターがいて、彼らの創作を応援したい人たちも集まっていること。<br>
-        <br>
-        好きな文学、映画、音楽について語り合いながら、
-        いつの間にか、お互いの人生を語り合う場になっていく。<br>
-        <br>
-        「挑戦するための足場となる居場所があること」
-        その大切さを認識しながら、コミュニティを育てていく。<br>
-        <br>
-        それが、コルクラボという場です。<br>
-        <br>
-        ここで、一緒に考え、つながり、変わっていきませんか？<br>
-        <br>
-        コルクラボ主宰 佐渡島庸平</p>
+        自分の本当の欲求に気づいて、仕事を変えたり、起業したりする人もいる。</p>
+        <p>逆に、今の仕事により深く向き合い、充実感を増していく人もいる。</p>
+        <p>大きな夢を持つ必要はない。
+        大切なのは「聖なる一歩」を踏み出すこと。</p>
+        <p>それは、ほんの小さな挑戦かもしれない。
+        でも、その一歩が、自分をより好きになれる未来へとつながっている。</p>
+        <p>コルクラボは、そんな「聖なる一歩」を支え合う場です。</p>
+        <p>ほかのコミュニティと異なるのは、ここには現役のクリエイターがいて、彼らの創作を応援したい人たちも集まっていること。</p>
+        <p>好きな文学、映画、音楽について語り合いながら、
+        いつの間にか、お互いの人生を語り合う場になっていく。</p>
+        <p>「挑戦するための足場となる居場所があること」
+        その大切さを認識しながら、コミュニティを育てていく。</p>
+        <p>それが、コルクラボという場です。</p>
+        <p>ここで、一緒に考え、つながり、変わっていきませんか？</p>
+        <p>コルクラボ主宰 佐渡島庸平</p>
       </div>
     </div>
   </div>
