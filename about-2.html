@@ -308,12 +308,6 @@
   background-color: unset;
 }
 
-/* メインビジュアル_コピー */
-.block_page_base .main_visual_block-catch_copy {
-  font-family: 'Noto Sans JP', sans-serif;
-  font-size: 2vw;
-}
-
 /* 見出しh2 */
 h2 {
   font-family: 'Kaisei Opti', serif;
@@ -349,19 +343,6 @@ h2::after {
 .h2-overlay h2::after {
   bottom: 24px;
 }
-
-/* 見出し小テキスト */
-.block_page_base .ql-size-small {
-  font-family: 'Kaisei Opti', serif;
-  display: block;
-  position: relative;
-  font-size: 18px;
-  font-weight: 400;
-  line-height: 1.5;
-  color: #66666660;
-  bottom: -18px;
-}
-
 
 /* 見出しh3 */
 h3 {
@@ -584,27 +565,6 @@ h3::after {
   margin-bottom: -0.5px;
 }
 
-/* タブレット以下のデザイン修正 */
-@media screen and (max-width: 768px) {
-
-  /* メインビジュアル_コピー */
-  .block_page_base .main_visual_block-catch_copy {
-    font-size: 6vw;
-  }
-
-  /* 画像とテキスト */
-  .block_page_base .image_and_text_block .image_and_text_block-panel {
-    margin-bottom: 48px;
-  }
-
-  /* 画像とテキスト_最後のリストの余白無しに */
-  .block_page_base .image_and_text_block .image_and_text_block-panel:last-of-type {
-    margin-bottom: 0px;
-  }
-
-  /* /ここまで＿タブレット以下のデザイン修正 */
-}
-
 /* image_block 画像サイズ */
 .image_block img {
   max-width: 800px;
@@ -624,18 +584,6 @@ h3::after {
 .space_block-lg { height: 54px; }
 .space_block-md { height: 48px; }
 
-/* 背景色ユーティリティ */
-.bg-white      { background-color: rgb(253, 253, 253); }
-.bg-peach      { background-color: rgb(248, 233, 208); }
-.bg-pink       { background-color: rgb(255, 238, 241); }
-.bg-gray-light { background-color: rgb(249, 249, 249); }
-.bg-beige      { background-color: rgb(255, 248, 237); }
-.bg-gray-cool  { background-color: rgb(247, 248, 249); }
-.bg-gray-warm  { background-color: rgb(184, 181, 177); }
-
-/* ブロックへのユーティリティクラス → 子 p に伝播 */
-.text-center > div > p { text-align: center; }
-.font-large > div > p  { font-size: 1.5em; }
 </style><script>window.dataLayer = window.dataLayer || [];</script><script src="https://www.googleoptimize.com/optimize.js?id=OPT-THRK3M3"></script>
 
 <!-- Google Tag Manager -->
