@@ -126,7 +126,12 @@ h3::after {
 /* wd3表現_ボックスレイアウト_リスト */
 .box_area > ul {
   max-width: 480px;
-  margin: 0 auto;
+  margin: 32px auto 0;
+}
+
+/* wd3表現_ボックスレイアウト_定義リスト */
+.box_area > dl {
+  margin-top: 32px;
 }
 
 /* wd3表現_ボックスレイアウト_１カラム */
@@ -153,10 +158,13 @@ h3::after {
   background-position: 0px 8px;
   background-image: url(https://staging.image.osiro.it/pass/media_libraries/876/images/original/icon_List.png?1661830018);
   padding-left: 32px;
-  margin-bottom: 24px;
+  margin-bottom: 12px;
   color: #333;
   font-weight: bold;
 }
+
+/* リストのデザイン_太字解除 */
+.li-normal li { font-weight: normal; }
 
 /* リストのデザイン_最後のリストの余白無しに */
 .block_page_base li:last-of-type {
@@ -170,8 +178,8 @@ h3::after {
   padding: 0px 0px 16px 0px;
   margin-bottom: 4px;
   color: #333;
-  font-family: 'Noto Sans JP', sans-serif;
-  font-size: 20px;
+  font-family: 'Kaisei Opti', serif;
+  font-size: 18px;
   font-weight: bold;
 }
 
@@ -214,7 +222,8 @@ h3::after {
 .block_page_base .qa dt {
   text-align: left;
   font-size: 16px;
-  font-weight: bold;
+  font-weight: normal;
+  font-family: 'Noto Sans JP', sans-serif;
   background-image: url(https://staging.image.osiro.it/pass/media_libraries/878/images/original/QA_Q.png?1661834127);
   background-size: 25px 28px;
   background-position: 0px 16px;
