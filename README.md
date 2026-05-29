@@ -6,13 +6,16 @@
 
 | ファイル | 用途 |
 |---|---|
-| `contents/about.css` | カスタム CSS（入稿用） |
-| `contents/about.html` | カスタム HTML（入稿用） |
+| `contents/about.css` | カスタム CSS（入稿用・全ページ共用） |
+| `contents/about.html` | 「コルクラボはこんなところ」ページの入稿 HTML |
+| `contents/go-ahead.html` | 「となりにどうぞ」ページの入稿 HTML |
 | `contents/template.html` | CMS から取得したページの雛形 |
-| `about.html` | ビルド成果物（ローカルプレビュー用） |
-| `scripts/build.py` | template + CSS + HTML を結合してプレビュー用 HTML を生成 |
-| `scripts/export-text.py` | contents/about.html からテキストを抽出して about.md に出力 |
-| `about.md` | about.html のテキスト抽出結果 |
+| `about.html` / `go-ahead.html` | ビルド成果物（ローカルプレビュー用） |
+| `scripts/build.py` | template + CSS + 各 HTML を結合してプレビュー用 HTML を生成 |
+| `scripts/export-text.py` | 各 contents/*.html からテキストを抽出して *.md に出力 |
+| `about.md` / `go-ahead.md` | 各 HTML のテキスト抽出結果 |
+
+ページを追加する場合は `scripts/build.py` と `scripts/export-text.py` の `PAGES` リストにスラッグを追加する。
 
 ## ローカルプレビュー
 
@@ -20,14 +23,15 @@
 python3 scripts/build.py
 python3 -m http.server 8765
 # → http://localhost:8765/about.html
+# → http://localhost:8765/go-ahead.html
 ```
 
 ## CMS 入稿
 
-OSIRO の管理画面から以下の 2 か所を更新する。
+OSIRO の管理画面から以下を更新する。
 
-1. **CSS** → `contents/about.css` の内容をそのままペースト
-2. **HTML** → `contents/about.html` の内容をそのままペースト
+1. **CSS**（全ページ共通） → `contents/about.css` の内容をそのままペースト
+2. **HTML**（ページごと） → `contents/{page}.html` の内容をそのままペースト
 
 ---
 

@@ -121,6 +121,15 @@ h3::after {
   padding: 24px 0 0 0;
 }
 
+/* イラスト画像（中央寄せ・幅制限） */
+.box_area img.illustration {
+  display: block;
+  width: auto;
+  max-width: 320px;
+  margin: 24px auto 0;
+  padding: 0;
+}
+
 /* wd3表現_ボックスレイアウト_リスト */
 .box_area > ul {
   max-width: 480px;

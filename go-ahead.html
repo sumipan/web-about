@@ -298,7 +298,315 @@
           }
         </style>
 <meta name="csrf-param" content="authenticity_token" />
-<meta name="csrf-token" content="wu1hvhyxh4UKZQ7HDcnm28jjjHGN2fREA8GP_wRupHHst_ehogJrX4cLZqCUyCbJM3em2IAeT05qS1isRNLqhA" /><style type="text/css"></style><style id="block_page_css" type="text/css"></style><script>window.dataLayer = window.dataLayer || [];</script><script src="https://www.googleoptimize.com/optimize.js?id=OPT-THRK3M3"></script>
+<meta name="csrf-token" content="wu1hvhyxh4UKZQ7HDcnm28jjjHGN2fREA8GP_wRupHHst_ehogJrX4cLZqCUyCbJM3em2IAeT05qS1isRNLqhA" /><style type="text/css"></style><style id="block_page_css" type="text/css">
+/* GoogleFontsの読み込み */
+@import url('https://fonts.googleapis.com/css2?family=Kaisei+Opti:wght@400;500;700&family=Noto+Sans+JP:wght@400;700&display=swap');
+
+/* ページ基本 */
+.block_page_base {
+  font-family: 'Noto Sans JP', sans-serif;
+  background-color: unset;
+}
+
+/* 見出しh2 */
+h2 {
+  font-family: 'Kaisei Opti', serif;
+  font-size: 36px;
+  font-weight: 500;
+  line-height: 1.2;
+  display: block;
+  position: relative;
+  margin-bottom: 32px;
+  text-align: center;
+}
+
+h2::after {
+  content: '';
+  display: block;
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%);
+  bottom: -24px;
+  width: 120px;
+  height: 4px;
+  background-color: #FF6884;
+}
+
+/* 背景画像上のh2_白背景 */
+.h2-overlay h2 {
+  background-color: rgba(255, 255, 255, 0.85);
+  padding: 16px 24px 60px;
+  border-radius: 16px;
+  margin-bottom: 0;
+}
+
+.h2-overlay h2::after {
+  bottom: 24px;
+}
+
+/* 見出しh3 */
+h3 {
+  font-family: 'Kaisei Opti', serif;
+  font-size: 24px;
+  font-weight: bold;
+  line-height: 1.2;
+  padding-left: 0px;
+  display: block;
+  position: relative;
+}
+
+/* 見出しh3_下線表現 */
+h3::after {
+  content: '';
+  display: block;
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%);
+  bottom: -12px;
+  width: 60px;
+  height: 2px;
+  background-color: #FF6884;
+}
+
+/* wd3表現_ボックスレイアウト（シャドウ付き） */
+/* wd3表現_ボックスレイアウト_全体領域 */
+.box_wrap {
+  padding: 24px 0px 0px;
+}
+
+/* 見出しブロック直後のbox_wrapは上余白を半分に */
+.heading_level_block + .html_block .box_wrap {
+  padding-top: 4px;
+}
+
+/* wd3表現_ボックスレイアウト_各ボックス */
+.box_area {
+  padding: 0px 24px 48px;
+  margin-top: 0px;
+  border-radius: 16px;
+  box-shadow: 0 0 24px 0 rgba(0, 0, 0, 0.10);
+  background-color: rgba(255, 255, 255, 0.9);
+}
+
+/* wd3表現_ボックスレイアウト_見出しh3 */
+.box_area h3 {
+  padding: 48px 0px 0px;
+  margin-bottom: 12px;
+  text-align: center;
+}
+
+/* wd3表現_ボックスレイアウト_見出しh4 */
+.box_area h4 {
+  padding: 48px 0px 0px;
+  text-align: left;
+  font-size: 21px;
+}
+
+/* wd3表現_ボックスレイアウト_見出しh5 */
+.box_area h5 {
+  padding: 24px 0px 0px;
+  text-align: left;
+  font-size: 18px;
+}
+
+/* wd3表現_ボックスレイアウト_テキスト */
+.box_area p {
+  padding: 8px 0px 16px;
+  text-align: left;
+  font-size: 16px;
+}
+
+/* wd3表現_ボックスレイアウト_画像 */
+.box_area img {
+  width: 100%;
+  padding: 24px 0 0 0;
+}
+
+/* イラスト画像（中央寄せ・幅制限） */
+.box_area img.illustration {
+  display: block;
+  width: auto;
+  max-width: 320px;
+  margin: 24px auto 0;
+  padding: 0;
+}
+
+/* wd3表現_ボックスレイアウト_リスト */
+.box_area > ul {
+  max-width: 480px;
+  margin: 32px auto 0;
+}
+
+/* wd3表現_ボックスレイアウト_定義リスト */
+.box_area > dl {
+  margin-top: 32px;
+}
+
+/* wd3表現_ボックスレイアウト_１カラム */
+.box_column1 {
+  display: block;
+}
+
+/* wd3表現_ボックスレイアウト_２カラム */
+.box_column2 {
+  display: grid;
+  gap: 48px 16px;
+  grid-template-columns: 1fr 1fr;
+}
+
+/* wd3表現_ボックスレイアウト_２カラム_各ボックス */
+.box_column2_section {
+  display: block;
+  width: 100%;
+}
+
+/* リストのデザイン */
+.block_page_base li {
+  background-size: 16px 11px;
+  background-position: 0px 8px;
+  background-image: url(https://image.osiro.it/pass/media_libraries/8408/images/original/icon_List.png?1779328723);
+  padding-left: 32px;
+  margin-bottom: 12px;
+  color: #333;
+  font-weight: bold;
+}
+
+/* リストのデザイン_太字解除 */
+.li-normal li { font-weight: normal; }
+
+/* リストのデザイン_最後のリストの余白無しに */
+.block_page_base li:last-of-type {
+  margin-bottom: 0px;
+}
+
+/* スケジュール_タイトル */
+.block_page_base dt {
+  position: relative;
+  text-align: center;
+  padding: 0px 0px 16px 0px;
+  margin-bottom: 4px;
+  color: #333;
+  font-family: 'Kaisei Opti', serif;
+  font-size: 18px;
+  font-weight: bold;
+}
+
+/* スケジュール_タイトル_下線表現 */
+.block_page_base dt::after {
+  content: '';
+  display: block;
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%);
+  bottom: 8px;
+  width: 60px;
+  height: 2px;
+  background-color: #FF6884;
+}
+
+/* スケジュール_説明 */
+.block_page_base dd {
+  text-align: center;
+  margin-bottom: 16px;
+  padding: 0px 16px 16px;
+  color: #333;
+  font-family: 'Noto Sans JP', sans-serif;
+  font-size: 16px;
+  font-weight: normal;
+}
+
+/* 入会の流れ */
+.block_page_base .join_us {
+  text-align: center;
+}
+
+/* 入会の流れ_矢印 */
+/* dl.join_us の直後の兄弟 img（HTMLソースで img を dl 外に明示配置） */
+.box_area > dl.join_us + img {
+  display: block;
+  width: 22px !important;
+  padding: 0 !important;
+  margin: -16px auto 16px;
+}
+
+/* Q&A_タイトル */
+.block_page_base .qa dt {
+  text-align: left;
+  font-size: 16px;
+  font-weight: normal;
+  font-family: 'Noto Sans JP', sans-serif;
+  background-image: url(https://image.osiro.it/pass/media_libraries/8409/images/original/QA_Q.png?1779328728);
+  background-size: 25px 28px;
+  background-position: 0px 16px;
+  padding: 16px 0px 16px 40px;
+  border-top: none;
+  border-right: none;
+}
+
+/* Q&A_タイトル_見出しh3の下線非表示 */
+.block_page_base .qa dt::after {
+  display: none;
+}
+
+/* Q&A_説明 */
+.block_page_base .qa dd {
+  text-align: left;
+  font-size: 16px;
+  font-weight: normal;
+  background-image: url(https://image.osiro.it/pass/media_libraries/8410/images/original/QA_A.png?1779328731);
+  background-size: 25px 25px;
+  background-position: 0px 2px;
+  padding: 0px 0px 16px 40px;
+  margin-bottom: 24px;
+  border-bottom: 2px solid #FF6884;
+}
+
+/* 各ブロックエリアの余白調整 */
+.block_page_base .block_element > div:not(.block_element-attachment_fixed) {
+  padding: 0px 24px 16px;
+}
+
+/* 見出しブロック_h2の上スペース */
+.block_page_base .heading_level_block > div:not(.block_element-attachment_fixed) {
+  padding-top: 20px;
+}
+
+/* chromeの薄い線解消 */
+.block_page_base .block_element {
+  margin-top: -0.5px;
+  margin-bottom: -0.5px;
+}
+
+/* image_block 画像サイズ */
+.image_block img {
+  max-width: 800px;
+}
+
+/* 固定フッターボタン */
+.fixed_footer_block-btn {
+  background-color: rgba(255, 166, 77, 0.95);
+  color: rgb(255, 255, 255);
+}
+
+/* スペーサー */
+.space_block {
+  display: block;
+  width: 100%;
+}
+.space_block-lg { height: 54px; }
+.space_block-md { height: 48px; }
+
+/* スマートフォン向けフォントサイズ調整 */
+@media (max-width: 480px) {
+  h2 {
+    font-size: 28px;
+  }
+  h3 {
+    font-size: 20px;
+  }
+}
+
+</style><script>window.dataLayer = window.dataLayer || [];</script><script src="https://www.googleoptimize.com/optimize.js?id=OPT-THRK3M3"></script>
 
 <!-- Google Tag Manager -->
 <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
@@ -333,7 +641,61 @@ fjs.parentNode.insertBefore(js, fjs);
   state: {},
   action() {},
   createUIInfo() {}
-};</script><div id="modalView"><modal-view></modal-view></div><div id="tourView"><tour-view></tour-view></div><div id="tipModalContainer"><tip-modal :current-user="current_user" :is-front-tip="true" ref="tip_modal"></tip-modal></div><div id="flashMessage"><transition name="fade"><copied-flash-message :message="message" @reset-flash-message="resetFlashMessage" v-if="showCopiedFlashMessage"></copied-flash-message></transition></div><nav class="sp-quick-nav osiro_before_login_header_color"><ul class="sp-quick-nav__list"><li class="sp-quick-nav__item"><a class="sp-quick-nav__link" href="/"><div class="svgColorOperation" style="mask-image: url(/images/svg_color_operation/home-icon.svg); -webkit-mask-image: url(/images/svg_color_operation/home-icon.svg); width: 24px; height: 24px; background-color: #607d8b;"></div><span class="sp-quick-nav__label osiro_before_login_header_icon_color">ホーム</span></a></li><li class="sp-quick-nav__item"><a class="sp-quick-nav__link" href="/contents"><div class="sp-quick-nav__icon-wrapper"><div class="svgColorOperation" style="mask-image: url(/images/svg_color_operation/note-icon.svg); -webkit-mask-image: url(/images/svg_color_operation/note-icon.svg); width: 24px; height: 24px; background-color: #607d8b;"></div><span class="sp-quick-nav__new-badge">New</span></div><span class="sp-quick-nav__label osiro_before_login_header_icon_color">運営＆サディより</span></a></li><li class="sp-quick-nav__item"><a class="sp-quick-nav__link" href="/blogs"><div class="sp-quick-nav__icon-wrapper"><div class="svgColorOperation" style="mask-image: url(/images/svg_color_operation/pen-icon.svg); -webkit-mask-image: url(/images/svg_color_operation/pen-icon.svg); width: 24px; height: 24px; background-color: #607d8b;"></div></div><span class="sp-quick-nav__label osiro_before_login_header_icon_color">ブログ</span></a></li><li class="sp-quick-nav__item"><a class="sp-quick-nav__link" href="/events?filter_type=upcoming&amp;order_type=start_date_asc"><div class="sp-quick-nav__icon-wrapper"><div class="svgColorOperation" style="mask-image: url(/images/svg_color_operation/calendar-icon.svg); -webkit-mask-image: url(/images/svg_color_operation/calendar-icon.svg); width: 24px; height: 24px; background-color: #607d8b;"></div></div><span class="sp-quick-nav__label osiro_before_login_header_icon_color">イベント</span></a></li><li class="sp-quick-nav__item"><button class="sp-quick-nav__link js-menu-open-btn" type="button"><i class="sp-quick-nav__icon icon-Humberger osiro_before_login_header_icon_color"></i><span class="sp-quick-nav__label osiro_before_login_header_icon_color">メニュー</span></button></li></ul></nav><div class="l-header__wrap unLogin osiro_before_login_header_color"><header class="l-header"><p class="l-header__title"><a class="l-header__titleText" href="/"><img alt="コルクラボ" class="l-header__logo__sp" src="https://image.osiro.it/pass/site_settings/25/site_logo_for_sps/original/cork.png?1646186296" /></a></p><a class="l-header__login-text osiro-ios-hidden osiro_before_login_header_icon_color" href="/login">ログイン</a></header></div><script>window.current_user = null</script><div id="side_nav"><aside class="l-menu js-menu unlogin-sp-menu"><h1 class="l-menu__title"><a href="/"><img alt="コルクラボ" class="siteLogo" src="https://image.osiro.it/pass/site_settings/25/site_logos/original/cork.png?1646186296" /></a></h1><div class="l-menu__inner"><div id="side_menu"><nav class="nav"><ul class="nav__items--lv1"><li class="nav__item navlist__about"><a href="/about">コルクラボはこんなところ</a></li><li class="nav__item navlist__contents osiroHighlightFunctionLabel"><a href="/contents">運営＆サディより<span class="nav__new-badge">New</span></a></li><li class="nav__item navlist__blogs osiroHighlightFunctionLabel"><a href="/events?filter_type=upcoming&amp;order_type=start_date_asc">イベント</a></li><li class="nav__item navlist__blogs osiroHighlightFunctionLabel"><a href="/blogs">ブログ</a></li></ul><ul class="nav__items--lv3"><li class="nav__item navlist__user_policy"><a href="/user-policy">利用規約</a></li><li class="nav__item navlist__privacy_policy"><a href="/privacy-policy">プライバシーポリシー</a></li><li class="nav__item navlist__specific_commercial"><a href="/specific-commercial">特定商取引法に基づく表記</a></li><li class="nav__item navlist__antisocial"><a href="/antisocial">反社会勢力に対する基本方針</a></li><li class="nav__item navlist__contact"><a href="/contact">お問い合わせ</a></li><li class="nav__item navlist__qa"><a href="/qa">よくある質問</a></li></ul></nav></div><button class="l-menu__close js-menu-close-btn" type="button"><i class="l-menu__close-icon icon-Close"></i><span class="l-menu__close-label">閉じる</span></button></div></aside></div><div id="toastLayout"></div><div class="l-content" id="l-content"><div class="l-content__main"><main class="l-main js-l-main slid"><div class="l-main__content"><div class="page-1832 page-go-ahead"></div></div></main></div></div><script> window.root_path = "/";</script></div><script>window.functionLabel = {"home":"ホーム","content":"運営＆サディより","group":"運営リンク集","event":"イベント","blog":"ブログ","timeline":"タイムライン","user_content":"メンバーブログ","group_content":"グループブログ","store":"SHOP","room":"◇◆◇◆◇◆","hashtag":"興味関心タグ","member":"メンバー","welcome_content":"ウェルカム","atrium":"ちょっとしたつぶやきの間","tweet":"つぶやき","book_club":"みんなの本棚"}
+};</script><div id="modalView"><modal-view></modal-view></div><div id="tourView"><tour-view></tour-view></div><div id="tipModalContainer"><tip-modal :current-user="current_user" :is-front-tip="true" ref="tip_modal"></tip-modal></div><div id="flashMessage"><transition name="fade"><copied-flash-message :message="message" @reset-flash-message="resetFlashMessage" v-if="showCopiedFlashMessage"></copied-flash-message></transition></div><nav class="sp-quick-nav osiro_before_login_header_color"><ul class="sp-quick-nav__list"><li class="sp-quick-nav__item"><a class="sp-quick-nav__link" href="/"><div class="svgColorOperation" style="mask-image: url(/images/svg_color_operation/home-icon.svg); -webkit-mask-image: url(/images/svg_color_operation/home-icon.svg); width: 24px; height: 24px; background-color: #607d8b;"></div><span class="sp-quick-nav__label osiro_before_login_header_icon_color">ホーム</span></a></li><li class="sp-quick-nav__item"><a class="sp-quick-nav__link" href="/contents"><div class="sp-quick-nav__icon-wrapper"><div class="svgColorOperation" style="mask-image: url(/images/svg_color_operation/note-icon.svg); -webkit-mask-image: url(/images/svg_color_operation/note-icon.svg); width: 24px; height: 24px; background-color: #607d8b;"></div><span class="sp-quick-nav__new-badge">New</span></div><span class="sp-quick-nav__label osiro_before_login_header_icon_color">運営＆サディより</span></a></li><li class="sp-quick-nav__item"><a class="sp-quick-nav__link" href="/blogs"><div class="sp-quick-nav__icon-wrapper"><div class="svgColorOperation" style="mask-image: url(/images/svg_color_operation/pen-icon.svg); -webkit-mask-image: url(/images/svg_color_operation/pen-icon.svg); width: 24px; height: 24px; background-color: #607d8b;"></div></div><span class="sp-quick-nav__label osiro_before_login_header_icon_color">ブログ</span></a></li><li class="sp-quick-nav__item"><a class="sp-quick-nav__link" href="/events?filter_type=upcoming&amp;order_type=start_date_asc"><div class="sp-quick-nav__icon-wrapper"><div class="svgColorOperation" style="mask-image: url(/images/svg_color_operation/calendar-icon.svg); -webkit-mask-image: url(/images/svg_color_operation/calendar-icon.svg); width: 24px; height: 24px; background-color: #607d8b;"></div></div><span class="sp-quick-nav__label osiro_before_login_header_icon_color">イベント</span></a></li><li class="sp-quick-nav__item"><button class="sp-quick-nav__link js-menu-open-btn" type="button"><i class="sp-quick-nav__icon icon-Humberger osiro_before_login_header_icon_color"></i><span class="sp-quick-nav__label osiro_before_login_header_icon_color">メニュー</span></button></li></ul></nav><div class="l-header__wrap unLogin osiro_before_login_header_color"><header class="l-header"><p class="l-header__title"><a class="l-header__titleText" href="/"><img alt="コルクラボ" class="l-header__logo__sp" src="https://image.osiro.it/pass/site_settings/25/site_logo_for_sps/original/cork.png?1646186296" /></a></p><a class="l-header__login-text osiro-ios-hidden osiro_before_login_header_icon_color" href="/login">ログイン</a></header></div><script>window.current_user = null</script><div id="side_nav"><aside class="l-menu js-menu unlogin-sp-menu"><h1 class="l-menu__title"><a href="/"><img alt="コルクラボ" class="siteLogo" src="https://image.osiro.it/pass/site_settings/25/site_logos/original/cork.png?1646186296" /></a></h1><div class="l-menu__inner"><div id="side_menu"><nav class="nav"><ul class="nav__items--lv1"><li class="nav__item navlist__about"><a href="/about">コルクラボはこんなところ</a></li><li class="nav__item navlist__contents osiroHighlightFunctionLabel"><a href="/contents">運営＆サディより<span class="nav__new-badge">New</span></a></li><li class="nav__item navlist__blogs osiroHighlightFunctionLabel"><a href="/events?filter_type=upcoming&amp;order_type=start_date_asc">イベント</a></li><li class="nav__item navlist__blogs osiroHighlightFunctionLabel"><a href="/blogs">ブログ</a></li></ul><ul class="nav__items--lv3"><li class="nav__item navlist__user_policy"><a href="/user-policy">利用規約</a></li><li class="nav__item navlist__privacy_policy"><a href="/privacy-policy">プライバシーポリシー</a></li><li class="nav__item navlist__specific_commercial"><a href="/specific-commercial">特定商取引法に基づく表記</a></li><li class="nav__item navlist__antisocial"><a href="/antisocial">反社会勢力に対する基本方針</a></li><li class="nav__item navlist__contact"><a href="/contact">お問い合わせ</a></li><li class="nav__item navlist__qa"><a href="/qa">よくある質問</a></li></ul></nav></div><button class="l-menu__close js-menu-close-btn" type="button"><i class="l-menu__close-icon icon-Close"></i><span class="l-menu__close-label">閉じる</span></button></div></aside></div><div id="toastLayout"></div><div class="l-content" id="l-content"><div class="l-content__main"><main class="l-main js-l-main slid"><div class="l-main__content"><div class="page-1832 page-go-ahead"><div class="block_page_base top_center">
+<div class="all_background_layer top_center" style="background-color: rgb(255, 255, 255); background-image: url('https://image.osiro.it/pass/image_uploads/1440590/images/original/%E3%82%B3%E3%83%AB%E3%82%AF%E3%83%A9%E3%83%9B%E3%82%99%E6%96%B0%E6%AD%93%E5%8B%9F%E9%9B%86KV_%E8%83%8C%E6%99%AF.jpg?1741312230=&width=1500&fit=bounds');"></div>
+
+<!-- となりにどうぞ -->
+<div class="heading_level_block block_element top_center h2-overlay">
+  <div class="block_element-attachment_fixed top_center"></div>
+  <div>
+    <h2>となりにどうぞ</h2>
+  </div>
+</div>
+
+<!-- 制度説明 -->
+<div class="html_block block_element top_center">
+  <div>
+    <div class="box_wrap">
+      <div class="box_area">
+        <h3>ゲスト会の空気を一緒に</h3>
+        <p>ラボメンの知り合いを、ゲスト会に1名だけ招待できる制度です。</p>
+        <ul>
+          <li>毎月第２水曜日・ゲスト会（東京・福岡など）</li>
+          <li>リアル会場限定／オンライン不可</li>
+          <li>コルクラボメンバーの知人（元ラボメンもOK）</li>
+          <li>ラボメン1名あたり1名まで</li>
+          <li>事前申請制・紹介者のラボメンが当日同伴</li>
+        </ul>
+        <img loading="lazy" class="illustration" src="https://image.osiro.it/pass/media_libraries/8413/images/original/boys.png?1780092323" alt="" />
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- となりにどうぞが生まれたわけ -->
+<div class="html_block block_element top_center">
+  <div>
+    <div class="box_wrap">
+      <div class="box_area">
+        <h3>となりにどうぞ、ってなに？</h3>
+        <p>コルクラボでは、毎月ゲストをお招きして「ゲスト会」というトークイベントをやっています。</p>
+        <p>これまではメンバーだけの場だったんですが、メンバーの「となり」に座って、外の方にもその時間をちょっとだけ覗けるようにしました。それが「となりにどうぞ」です。</p>
+        <p>きっかけは、こんな出来事でした。</p>
+        <p>あるとき、ラボメンが企画したイベントに来てくれた方が、その場でたまたまコルクラボの空気に触れて——あとからメンバーとして入ってきました。</p>
+        <p>説明を読むより、紹介を聞くより、その場に居合わせてみる方が、コミュニティの輪郭って、ずっとつかみやすい。それを実感したのが、この制度のはじまりです。</p>
+        <p>コルクラボがどんな場所か、言葉だけで伝えるのは、正直むずかしいところがあります。</p>
+        <p>ゲストのお話。メンバー同士のやりとり。会場の空気。</p>
+        <p>隣の席から、そのまま受け取っていただくのが、いちばん早い気がしています。</p>
+        <p>ラボにちょっと興味がある方。ゲストのお話を聞いてみたい方。なんとなく覗いてみたい方。旧交を温めたい元ラボメンの方。</p>
+        <p>知り合いのメンバーがいたら、ぜひ「となり」に座りに来てください。</p>
+        <p style="text-align: center"><a href="https://x.com/i/lists/1248066098169122816" target="_blank" rel="noopener">コルクラボのメンバー探しはこちらから</a></p>
+      </div>
+    </div>
+  </div>
+</div>
+
+</div>
+</div></div></main></div></div><script> window.root_path = "/";</script></div><script>window.functionLabel = {"home":"ホーム","content":"運営＆サディより","group":"運営リンク集","event":"イベント","blog":"ブログ","timeline":"タイムライン","user_content":"メンバーブログ","group_content":"グループブログ","store":"SHOP","room":"◇◆◇◆◇◆","hashtag":"興味関心タグ","member":"メンバー","welcome_content":"ウェルカム","atrium":"ちょっとしたつぶやきの間","tweet":"つぶやき","book_club":"みんなの本棚"}
 window.pusher_app_key = "7696b5097a9eee6b995b"
 window.closeBtnUrl = "https://assets.osiro.it/assets/pass/front/ui_2_0/close_btn-23be57bec135e7ca158284150321ff621f343b484ba6a8bd91b129e649992710.svg"
 window.tbSize = 768

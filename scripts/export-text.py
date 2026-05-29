@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """
-contents/about.html から HTML タグを除去してテキストを about.md に出力
+contents/{page}.html から HTML タグを除去してテキストを {page}.md に出力
 """
 
 from html.parser import HTMLParser
@@ -8,6 +8,8 @@ from pathlib import Path
 import re
 
 BASE = Path(__file__).parent.parent
+
+PAGES = ["about", "go-ahead"]
 
 HEADINGS   = {'h1': '#', 'h2': '##', 'h3': '###', 'h4': '####', 'h5': '#####'}
 SKIP_TAGS  = {'script', 'style'}  # img は void element のため除外
@@ -54,11 +56,12 @@ class TextExtractor(HTMLParser):
         return text.strip()
 
 
-src = BASE / 'contents' / 'about.html'
-out = BASE / 'about.md'
+for page in PAGES:
+    src = BASE / 'contents' / f'{page}.html'
+    out = BASE / f'{page}.md'
 
-ex = TextExtractor()
-ex.feed(src.read_text(encoding='utf-8'))
+    ex = TextExtractor()
+    ex.feed(src.read_text(encoding='utf-8'))
 
-out.write_text(ex.result() + '\n', encoding='utf-8')
-print(f'Exported: {out} ({out.stat().st_size:,} bytes)')
+    out.write_text(ex.result() + '\n', encoding='utf-8')
+    print(f'Exported: {out} ({out.stat().st_size:,} bytes)')
