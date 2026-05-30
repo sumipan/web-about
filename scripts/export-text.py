@@ -9,7 +9,7 @@ import re
 
 BASE = Path(__file__).parent.parent
 
-PAGES = ["about", "go-ahead"]
+PAGES = ["about", "go-ahead", "sake-awai"]
 
 HEADINGS   = {'h1': '#', 'h2': '##', 'h3': '###', 'h4': '####', 'h5': '#####'}
 SKIP_TAGS  = {'script', 'style'}  # img は void element のため除外

@@ -9,7 +9,7 @@ from pathlib import Path
 BASE = Path(__file__).parent.parent  # scripts/ の親 = プロジェクトルート
 CONTENTS = BASE / "contents"
 
-PAGES = ["about", "go-ahead"]
+PAGES = ["about", "go-ahead", "sake-awai"]
 
 template = (CONTENTS / "template.html").read_text(encoding="utf-8")
 css      = (CONTENTS / "about.css").read_text(encoding="utf-8")

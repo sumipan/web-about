@@ -9,11 +9,12 @@
 | `contents/about.css` | カスタム CSS（入稿用・全ページ共用） |
 | `contents/about.html` | 「コルクラボはこんなところ」ページの入稿 HTML |
 | `contents/go-ahead.html` | 「となりにどうぞ」ページの入稿 HTML |
+| `contents/sake-awai.html` | クラフト酒「あわい」ZINE紹介ページの入稿 HTML |
 | `contents/template.html` | CMS から取得したページの雛形 |
-| `about.html` / `go-ahead.html` | ビルド成果物（ローカルプレビュー用） |
+| `about.html` / `go-ahead.html` / `sake-awai.html` | ビルド成果物（ローカルプレビュー用） |
 | `scripts/build.py` | template + CSS + 各 HTML を結合してプレビュー用 HTML を生成 |
 | `scripts/export-text.py` | 各 contents/*.html からテキストを抽出して *.md に出力 |
-| `about.md` / `go-ahead.md` | 各 HTML のテキスト抽出結果 |
+| `about.md` / `go-ahead.md` / `sake-awai.md` | 各 HTML のテキスト抽出結果 |
 
 ページを追加する場合は `scripts/build.py` と `scripts/export-text.py` の `PAGES` リストにスラッグを追加する。
 
@@ -24,6 +25,7 @@ python3 scripts/build.py
 python3 -m http.server 8765
 # → http://localhost:8765/about.html
 # → http://localhost:8765/go-ahead.html
+# → http://localhost:8765/sake-awai.html
 ```
 
 ## CMS 入稿
