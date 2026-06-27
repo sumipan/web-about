@@ -1,27 +1,51 @@
-name: Build about.html
+name: Build HTML artifacts
 
 on:
   push:
     branches: [main]
     paths:
       - 'contents/**'
-      - 'scripts/build.py'
+      - 'scripts/**'
 
 jobs:
   build:
     runs-on: ubuntu-latest
     permissions:
       contents: write
+      pages: write
+      id-token: write
     steps:
       - uses: actions/checkout@v4
 
       - name: Build
-        run: python3 scripts/build.py
+        run: |
+          python3 scripts/build.py
+          python3 scripts/export-text.py
 
-      - name: Commit about.html
+      - name: Commit artifacts
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
-          git add about.html
-          git diff --staged --quiet || git commit -m "chore: rebuild about.html [skip ci]"
+          git add *.html *.md
+          git diff --staged --quiet || git commit -m "chore: rebuild artifacts [skip ci]"
           git push
+
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+    permissions:
+      pages: write
+      id-token: write
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: main
+      - uses: actions/configure-pages@v4
+      - uses: actions/upload-pages-artifact@v3
+        with:
+          path: .
+      - id: deployment
+        uses: actions/deploy-pages@v4
