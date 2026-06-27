@@ -26,6 +26,7 @@ for page in PAGES:
 
     result = template.replace(CSS_MARKER, f'<style id="block_page_css" type="text/css">\n{css}</style>', 1)
     result = result.replace(HTML_MARKER, f'<div class="page-1832 page-go-ahead">{html}</div>', 1)
+    result = result.replace('<head>', '<head><base href="/web-about/">', 1)
 
     out = BASE / f"{page}.html"
     out.write_text(result, encoding="utf-8")
