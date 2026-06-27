@@ -4,6 +4,7 @@ template.html + contents/about.css + contents/{page}.html -> {page}.html
 CSS は全ページで about.css を共用。
 """
 
+import re
 from pathlib import Path
 from pages import PAGES
 
@@ -27,6 +28,7 @@ for page in PAGES:
     result = template.replace(CSS_MARKER, f'<style id="block_page_css" type="text/css">\n{css}</style>', 1)
     result = result.replace(HTML_MARKER, f'<div class="page-1832 page-go-ahead">{html}</div>', 1)
     result = result.replace('<head>', '<head><base href="/web-about/">', 1)
+    result = re.sub(r'<script\b[^>]*>.*?</script>', '', result, flags=re.DOTALL)
 
     out = BASE / f"{page}.html"
     out.write_text(result, encoding="utf-8")
