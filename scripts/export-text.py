@@ -7,9 +7,9 @@ from html.parser import HTMLParser
 from pathlib import Path
 import re
 
-BASE = Path(__file__).parent.parent
+from pages import PAGES
 
-PAGES = ["about", "go-ahead", "sake-awai"]
+BASE = Path(__file__).parent.parent
 
 HEADINGS   = {'h1': '#', 'h2': '##', 'h3': '###', 'h4': '####', 'h5': '#####'}
 SKIP_TAGS  = {'script', 'style'}  # img は void element のため除外
