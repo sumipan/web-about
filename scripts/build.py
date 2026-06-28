@@ -51,6 +51,11 @@ for page in PAGES:
     result = result.replace(HTML_MARKER, f'<div class="page-1832 page-go-ahead">{html}</div>', 1)
     result = result.replace('<head>', '<head><base href="/web-about/">', 1)
     result = re.sub(r'<script\b[^>]*>.*?</script>', '', result, flags=re.DOTALL)
+    # Vue コンポーネントのラッパー DIV を削除（JS なしでは空ブロック要素としてレイアウトを壊す）
+    for div_id in ('modalView', 'tourView', 'tipModalContainer', 'flashMessage'):
+        result = re.sub(rf'<div id="{div_id}">.*?</div>', '', result, flags=re.DOTALL)
+    # SPA 専用 CDN リンク（video.js, quilljs）を削除
+    result = re.sub(r'<link\b[^>]*(?:video-js|quilljs)[^>]*/>', '', result)
     # root-relative /images/ パスを絶対 URL に変換（GitHub Pages では解決できないため）
     result = re.sub(r'url\((/images/)', r'url(https://lab.corkagency.com\1', result)
 
